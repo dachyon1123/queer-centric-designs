@@ -5,6 +5,7 @@ export default function UploadFile() {
   const [pattern, setPattern] = useState("");
   const [model, setModel] = useState("");
   const [price, setPrice] = useState();
+  const [artist, setArtist] = useState('')
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -12,6 +13,7 @@ export default function UploadFile() {
 
     formData.append('file', file)
     formData.append("pattern", pattern);
+    formData.append("artist", artist)
     formData.append("model", model);
     formData.append("price", price);
 
@@ -58,6 +60,18 @@ export default function UploadFile() {
           onChange={(e) => setPattern(e.target.value)}
           className="input input-bordered w-full max-w-xs"
           value={pattern}
+        />
+
+        <label htmlFor="artist" className="mt-4">
+          Artist
+        </label>
+        <input
+          type="text"
+          name="artist"
+          id="artist"
+          onChange={(e) => setArtist(e.target.value)}
+          className="input input-bordered w-full max-w-xs"
+          value={artist}
         />
 
         <label htmlFor="model" className="mt-4">

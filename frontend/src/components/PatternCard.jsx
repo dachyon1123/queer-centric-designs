@@ -1,12 +1,16 @@
 import logo from "../assets/logo.png";
 
-export default function PatternCard() {
+
+
+
+
+export default function PatternCard(props) {
   return (
     <div className="card card-compact w-64 bg-base-100 shadow-xl">
       <figure>
         <img
-          src={logo}
-          alt="Shoes"
+          src={props.image}
+          alt="Image"
         />
       </figure>
       <div className="card-body">

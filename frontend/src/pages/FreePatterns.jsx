@@ -2,7 +2,8 @@ import PatternCard from "../components/PatternCard";
 
 export default function FreePatterns() {
   const array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-
+  const patternArray = fetch('http://localhost:5000/getImages')
+  console.log(patternArray)
 
   return (
     <main className="flex flex-col items-center">

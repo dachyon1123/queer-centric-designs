@@ -13,10 +13,6 @@ connectDB();
 
 const app = express();
 
-app.post('/image', upload.single('file'), function (req, res, next) {
-  console.log(req.body)
-  console.log(req.file)
-})
 
 app.use(cors());
 app.use(express.json())

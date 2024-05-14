@@ -2,9 +2,14 @@ const mongoose = require("mongoose");
 
 const patternSchema = mongoose.Schema(
   {
-    name: {
+    filename: {
       type: String,
       required: true,
+    },
+    pattern: {
+      type: String,
+      required: true,
+      unique: true,
     },
     artist: {
       type: String,
